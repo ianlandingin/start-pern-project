@@ -6,7 +6,7 @@ next_line (){
 }
 
 echo "In what environment are you running this script?
-(1 - Windows; 2 - Linux or WSL;): "
+(1 - Windows; 2 - Linux/WSL(Suggested);): "
 read -r OS
 next_line
 if [ $OS = 1 ]; then
@@ -61,13 +61,16 @@ fi
 done
 
 
-echo "Database name?: "
+echo "New database name?: "
 read -r DB_NAME
+
 echo "New psql user for database?: "
 read -r DB_USER
+
 echo "Password: "
 read -rs PASSWORD
 echo "Repeat password: "
 read -rs RE_PASSWORD
 
+echo "Do you need multiple tables for this project?(Y/n): "
 
